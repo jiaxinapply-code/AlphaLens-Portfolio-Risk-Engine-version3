@@ -33,7 +33,7 @@ def test_download_adjusted_close_prices_multiindex(mock_download):
     assert list(prices.columns) == ["SPY", "QQQ"]
     assert prices.index.is_monotonic_increasing
 
-
+#c
 @patch("bigdata.data_pipeline.yf.download")
 def test_download_adjusted_close_prices_multiindex_close_fallback(mock_download):
     columns = pd.MultiIndex.from_product([["Close"], ["SPY", "QQQ"]])
